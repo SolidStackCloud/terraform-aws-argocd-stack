@@ -18,6 +18,3 @@ variable "cluster_name" {
   default = ""
 }
 
-variable "dominio" {
-
-}

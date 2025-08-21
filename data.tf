@@ -8,7 +8,3 @@ data "aws_ssm_parameter" "cluster_name" {
 data "aws_eks_cluster" "main" {
   name = var.solidstack_vpc_module ? data.aws_ssm_parameter.cluster_name[0].value : var.cluster_name
 }
-
-data "aws_eks_cluster_auth" "main" {
-  name = data.aws_eks_cluster.main.id
-}
