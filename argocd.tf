@@ -33,5 +33,5 @@ resource "helm_release" "argocd" {
       value = "https://github.com/argoproj-labs/rollout-extension/releases/download/v0.3.6/extension.tar"
     }
   ]
-
+ depends_on = [ helm_release.argo_rollouts ]
 }
